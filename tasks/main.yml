@@ -18,6 +18,12 @@
   with_first_found:
     - "{{ ansible_distribution }}.yml"
 
+- name: Ensure mongodb service is started and enabled
+  service:
+    name: mongodb
+    enabled: yes
+    state: started
+
 - name: Ensure pritunl service is started and enabled
   service:
     name: pritunl
