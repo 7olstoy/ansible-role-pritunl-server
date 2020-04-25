@@ -8,7 +8,7 @@ An Ansible Role that installs Pritunl Server (https://pritunl.com).
 Requirements
 ------------
 
-This role only supports Ubuntu 12.x, 14.x, 16.x.
+This role only supports Ubuntu 18.x.
 
 Example Playbook
 ----------------
