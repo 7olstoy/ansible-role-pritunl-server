@@ -19,3 +19,15 @@
     update_cache: yes
     cache_valid_time: 3600
     state: present
+
+- name: Ensure apt key for mongodb server is present
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: "{{ mongodb_server_key }}"
+
+- name: Ensure apt repository for mongodb server is present
+  apt_repository:
+    repo: "{{ mongodb_server_repo }}"
+    filename: mongodb
+    update_cache: yes
+    state: present
