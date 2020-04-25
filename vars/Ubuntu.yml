@@ -3,7 +3,7 @@
 
 pritunl_server_key: 7568D9BB55FF9E5287D586017AE645C0CF8E292A
 pritunl_server_repo: deb https://repo.pritunl.com/stable/apt {{ ansible_distribution_release }} main
-pritunl_server_version: 1.28.1487.93-0ubuntu1~{{ ansible_distribution_release }}
+pritunl_server_version: 1.29.2395.63-0ubuntu1~{{ ansible_distribution_release }}
 
 mongodb_server_key: E162F504A20CDF15827F718D4B7C549A058F8B6B
 mongodb_server_version: 4.2
