@@ -38,3 +38,10 @@
     update_cache: yes
     cache_valid_time: 3600
     state: present
+  
+# Hotfix for pritunl installer (empty mongodb_uri in /etc/pritunl.conf after installation)
+- name: Ensure mongodb server is present into /etc/pritunl.conf
+  lineinfile:
+    path: /etc/pritunl.conf
+    regexp: '^.*"mongodb_uri": ""$'
+    line: '    "mongodb_uri": "mongodb://127.0.0.1:27017/pritunl"'
