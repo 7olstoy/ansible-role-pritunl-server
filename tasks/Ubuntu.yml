@@ -34,10 +34,14 @@
 
 - name: Ensure mongodb server is present
   apt:
-    name: mongodb-server
+    name: mongodb-org
     update_cache: yes
     cache_valid_time: 3600
     state: present
+
+- name: Force systemd to reread configs
+  systemd:
+    daemon_reload: yes
   
 # Hotfix for pritunl installer (empty mongodb_uri in /etc/pritunl.conf after installation)
 - name: Ensure mongodb server is present into /etc/pritunl.conf

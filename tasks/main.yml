@@ -20,7 +20,7 @@
 
 - name: Ensure mongodb service is started and enabled
   service:
-    name: mongodb
+    name: mongod
     enabled: yes
     state: started
 
